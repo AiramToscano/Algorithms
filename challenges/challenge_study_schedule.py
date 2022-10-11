@@ -10,4 +10,4 @@ def study_schedule(permanence_period, target_time):
 
 
 # permanence_period = [(2, 2), (1, 2), (2, 2), (1, 5), (4, 5), (4, 5)]
-# print(study_schedule(permanence_period, ''))
+
