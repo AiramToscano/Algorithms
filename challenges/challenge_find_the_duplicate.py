@@ -1,3 +1,5 @@
+
+
 def find_duplicate(nums):
     try:
         return duplicate(nums)
@@ -6,14 +8,12 @@ def find_duplicate(nums):
 
 
 def duplicate(nums):
-    maior = []
-    arrayOrd = sorted(nums)
-    for i in arrayOrd:
+    nums.sort()
+    for index, i in enumerate(nums):
         if (int(i) < 1):
             return False
-        if (arrayOrd.count(i) > 1 and i not in maior):
-            maior.append(i)
-    return maior[0]
+        if (nums[index] == nums[index + 1]):
+            return nums[index]
+    return False
 
-
-# print(find_duplicate([1, 3, 4, 2, 2, 2]))
+# print(find_duplicate([1, 3, 4, 100, 2, 2]))
